@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,7 +20,7 @@
 
     <h3>Adicionar Feedback</h3>
     <form id="feedbackForm" action="submitFeedback" method="post">
-        <input type="hidden" name="produto_id" value="1"> <!-- ID do produto -->
+        <input type="hidden" name="produto_id" value="${param.produto_id}"> <!-- ID do produto -->
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario"><br>
         <label for="rating">Nota:</label>
@@ -30,19 +30,7 @@
         <input type="submit" value="Enviar">
     </form>
 
-
-    <p id="successMessage" class="hidden">Feedback enviado com sucesso!</p>
-
     <a href="produtos.html">Voltar</a>
-
-    <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-            
-
-            // Exibe a mensagem de sucesso
-            document.getElementById('successMessage').classList.remove('hidden');
-            
-        });
-    </script>
 </body>
 </html>
+
