@@ -9,8 +9,6 @@
 - Java
 - MySQL
 - HTML/CSS
-- JavaScript
-- AJAX
 
 ## Time de Desenvolvedores
 
