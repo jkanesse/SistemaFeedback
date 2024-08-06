@@ -17,11 +17,23 @@ public class SubmitFeedbackServlet extends HttpServlet {
         String ratingStr = request.getParameter("rating");
         String comentario = request.getParameter("comment");
 
+        // Validação no servidor
+        if (usuario == null || usuario.trim().isEmpty() ||
+            ratingStr == null || ratingStr.trim().isEmpty() ||
+            comentario == null || comentario.trim().isEmpty()) {
+
+            // Define uma mensagem de erro e redireciona de volta para a página do produto
+            request.setAttribute("errorMessage", "Todos os campos são obrigatórios!");
+            request.getRequestDispatcher("/produtoFeedback?produto_id=" + produtoId).forward(request, response);
+            return;
+        }
+
         int avaliacao;
         try {
             avaliacao = Integer.parseInt(ratingStr);
         } catch (NumberFormatException e) {
-            response.getWriter().write("Erro: Nota inválida.");
+            request.setAttribute("errorMessage", "Erro: Nota inválida.");
+            request.getRequestDispatcher("/produtoFeedback?produto_id=" + produtoId).forward(request, response);
             return;
         }
 
@@ -36,7 +48,8 @@ public class SubmitFeedbackServlet extends HttpServlet {
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            response.getWriter().write("Erro ao inserir o feedback.");
+            request.setAttribute("errorMessage", "Erro ao inserir o feedback.");
+            request.getRequestDispatcher("/produtoFeedback?produto_id=" + produtoId).forward(request, response);
             return;
         }
 

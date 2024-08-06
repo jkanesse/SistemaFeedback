@@ -31,6 +31,18 @@
     </form>
 
     <a href="produtos.html">Voltar</a>
+    <script>
+    document.getElementById("feedbackForm").onsubmit = function(event) {
+        var usuario = document.getElementById("usuario").value.trim();
+        var rating = document.getElementById("rating").value.trim();
+        var comentario = document.getElementById("comment").value.trim();
+
+        if (usuario === "" || rating === "" || comentario === "") {
+            alert("Todos os campos são obrigatórios!");
+            event.preventDefault();  // Impede o envio do formulário
+        }
+    };
+</script>
 </body>
 </html>
 
