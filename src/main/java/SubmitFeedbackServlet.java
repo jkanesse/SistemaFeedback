@@ -40,8 +40,9 @@ public class SubmitFeedbackServlet extends HttpServlet {
             return;
         }
 
-        // Redireciona para a página que exibe os feedbacks
+        // Redireciona para a página de feedback do produto correspondente
         response.sendRedirect("produtoFeedback?produto_id=" + produtoId);
     }
 }
+
 

@@ -37,9 +37,24 @@ public class ProductFeedbackServlet extends HttpServlet {
         }
 
         request.setAttribute("feedbacks", feedbacks);
-        request.getRequestDispatcher("/produto.jsp").forward(request, response);
+
+        // Redireciona para a página JSP correspondente ao produto
+        switch (produtoId) {
+            case "1":
+                request.getRequestDispatcher("/produto1.jsp").forward(request, response);
+                break;
+            case "2":
+                request.getRequestDispatcher("/produto2.jsp").forward(request, response);
+                break;
+            case "3":
+                request.getRequestDispatcher("/produto3.jsp").forward(request, response);
+                break;
+            default:
+                response.getWriter().write("Produto não encontrado.");
+        }
     }
 }
+
 
 class Feedback {
     private String usuario;

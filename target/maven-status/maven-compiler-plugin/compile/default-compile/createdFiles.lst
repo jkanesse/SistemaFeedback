@@ -1,4 +1,6 @@
 DatabaseConnection.class
+ProductFeedbackServlet.class
 com\podcast\sistemafeedbackprodutos\JakartaRestConfiguration.class
 com\podcast\sistemafeedbackprodutos\resources\JakartaEE10Resource.class
 SubmitFeedbackServlet.class
+Feedback.class

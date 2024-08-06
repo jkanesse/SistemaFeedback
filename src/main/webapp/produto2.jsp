@@ -20,7 +20,7 @@
 
     <h3>Adicionar Feedback</h3>
     <form id="feedbackForm" action="submitFeedback" method="post">
-        <input type="hidden" name="produto_id" value="${param.produto_id}"> <!-- ID do produto -->
+        <input type="hidden" name="produto_id" value="2"> <!-- ID do produto 2 -->
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario"><br>
         <label for="rating">Nota:</label>
@@ -33,3 +33,4 @@
     <a href="produtos.html">Voltar</a>
 </body>
 </html>
+

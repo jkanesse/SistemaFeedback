@@ -3,12 +3,12 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Detalhes do Produto</title>
+    <title>Detalhes do Produto 3</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Detalhes do Produto</h1>
-    <p>Descrição do Produto...</p>
+    <h1>Detalhes do Produto 3</h1>
+    <p>Descrição do Produto 3...</p>
 
     <h2>Feedbacks</h2>
     <ul>
@@ -20,7 +20,7 @@
 
     <h3>Adicionar Feedback</h3>
     <form id="feedbackForm" action="submitFeedback" method="post">
-        <input type="hidden" name="produto_id" value="${param.produto_id}"> <!-- ID do produto -->
+        <input type="hidden" name="produto_id" value="3"> <!-- ID do produto 3 -->
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario"><br>
         <label for="rating">Nota:</label>
@@ -33,3 +33,4 @@
     <a href="produtos.html">Voltar</a>
 </body>
 </html>
+
