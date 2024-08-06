@@ -56,6 +56,7 @@ public class ProductFeedbackServlet extends HttpServlet {
 }
 
 
+
 class Feedback {
     private String usuario;
     private int avaliacao;
